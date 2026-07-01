@@ -1,44 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital: Contra a Desinformação</title>
+    <title>Cidadania Digital e IA: Deepfakes e Desinformação</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <h1>Guia de Identificação de Deepfakes</h1>
-        <nav>
-            <button id="btn-modo">Alternar Modo Escuro</button>
-        </nav>
+        <div class="header-container">
+            <h1>Cidadania Digital & Inteligência Artificial</h1>
+            <p>Consciencialização sobre o impacto das Deepfakes e da Desinformação na Sociedade</p>
+        </div>
     </header>
 
+    <nav>
+        <a href="#o-que-sao">O que são Deepfakes</a>
+        <a href="#como-identificar">Como Identificar</a>
+        <a href="#boas-praticas">Boas Práticas</a>
+        <a href="#quiz">Testa os teus Conhecimentos</a>
+    </nav>
+
     <main>
-        <section id="sobre">
+        
+        <section id="o-que-sao" class="card-section">
             <h2>O que são Deepfakes?</h2>
-            <p>Conteúdo gerado por IA para enganar usuários. Aprenda a identificar sinais sutis de manipulação.</p>
+            <article>
+                <p>As <strong>Deepfakes</strong> são mídias (vídeos, imagens ou áudios) sintetizadas por Inteligência Artificial (IA) que conseguem imitar o rosto e a voz de pessoas reais de forma extremamente convincente. Embora a tecnologia tenha aplicações legítimas no cinema e entretenimento, ela é frequentemente utilizada de forma maliciosa para espalhar desinformação e criar notícias falsas (<em>fake news</em>) automatizadas.</p>
+            </article>
         </section>
 
-        <section id="quiz">
-            <h2>Teste seus conhecimentos</h2>
-            <form id="form-quiz">
-                <p>Você consegue identificar uma imagem manipulada?</p>
-                <input type="radio" name="resposta" value="sim" id="sim">
-                <label for="sim">Sim, observo iluminação e bordas.</label><br>
-                
-                <input type="radio" name="resposta" value="nao" id="nao">
-                <label for="nao">Não, confio no que vejo de primeira.</label><br>
-                
-                <button type="submit">Enviar Resposta</button>
-            </form>
-            <div id="resultado"></div>
+        <section id="como-identificar" class="card-section">
+            <h2>Como Identificar Mídias Manipuladas por IA</h2>
+            <p>Detetar uma deepfake está a tornar-se cada vez mais difícil, mas ainda existem pistas visuais e sonoras que nos ajudam a desconfiar da veracidade do conteúdo:</p>
+            
+            <div class="dicas-container">
+                <div class="dica-item">
+                    <h3>👁️ Olhar e Expressão</h3>
+                    <p>O piscar de olhos pode parecer ausente, mecânico ou não natural. As expressões faciais podem não condizer com a emoção da fala.</p>
+                </div>
+                <div class="dica-item">
+                    <h3>💡 Iluminação e Bordas</h3>
+                    <p>Procura por falhas nas sombras ao redor do nariz e dos olhos, ou pequenos borrões na transição entre o rosto e o cabelo.</p>
+                </div>
+                <div class="dica-item">
+                    <h3>🔊 Dessincronização de Áudio</h3>
+                    <p>Presta atenção se o movimento dos lábios está perfeitamente sincronizado com as palavras que estás a ouvir.</p>
+                </div>
+            </div>
         </section>
+
+        <section id="boas-praticas" class="card-section bg-light">
+            <h2>Boas Práticas de Cidadania Digital</h2>
+            <p>Para navegar na internet de forma segura e ética, adota os seguintes comportamentos:</p>
+            <ul>
+                <li><strong>Não partilhes por impulso:</strong> Se a notícia parece demasiado bombástica, desconfia e não a repasses imediatamente.</li>
+                <li><strong>Verifica as fontes oficiais:</strong> Pesquisa se grandes portais de notícias ou agências de checagem de factos já falaram sobre o assunto.</li>
+                <li><strong>Denuncia conteúdo falso:</strong> Utiliza as ferramentas das próprias redes sociais para reportar perfis e publicações desinformativas.</li>
+            </ul>
+        </section>
+
+        <section id="quiz" class="card-section">
+            <h2>Desafio Interativo: Estás Seguro Online?</h2>
+            <p>Responde à questão abaixo para testar a tua capacidade de combater a desinformação digital:</p>
+            
+            <form id="quiz-form">
+                <p class="question-text">Se receberes um vídeo com uma declaração polémica de uma figura pública no WhatsApp através de um link desconhecido, qual deve ser a tua primeira ação?</p>
+                
+                <label class="option-label">
+                    <input type="radio" name="quiz-answer" value="errada-1" required>
+                    <span>Partilhar nos grupos de amigos para alertar toda a gente o mais rápido possível.</span>
+                </label>
+                
+                <label class="option-label">
+                    <input type="radio" name="quiz-answer" value="correta">
+                    <span>Ignorar o link, procurar o tema num motor de busca confiável e verificar se o vídeo é real antes de partilhar.</span>
+                </label>
+                
+                <label class="option-label">
+                    <input type="radio" name="quiz-answer" value="errada-2">
+                    <span>Acreditar na informação, assumindo que se está em formato de vídeo não pode ter sido manipulado.</span>
+                </label>
+
+                <button type="submit" id="btn-submit">Validar Resposta</button>
+            </form>
+            
+            <div id="quiz-result" class="hidden"></div>
+        </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 - Projeto de Educação Digital e IA</p>
+        <div class="footer-container">
+            <p>&copy; 2026 - Projeto de Educação Digital e IA | Cidadania Digital</p>
+            <p><small>Desenvolvido para a Atividade de Recuperação Prática.</small></p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
